@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Chuck Norris</title>
+</head>
+<body>
+    <h1>Chuck norris API</h1>
+
+    <div id="info_api">
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async()=>{
+            const chucknorrisURL = `https://api.chucknorris.io/jokes/random`;
+            const responseUser = await fetch(chucknorrisURL);
+            const chuck_joke = await responseUser.json();
+
+            const data = document.getElementById("info_api");
+
+            data.innerHTML = `
+                <label>Broma: ${data.value}</<label>
+            `;
+        });
+
+    </script>
+</body>
+</html>
