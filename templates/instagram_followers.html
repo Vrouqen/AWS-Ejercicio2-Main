@@ -3,9 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Api Instagram</title>
 </head>
 <body>
     
+    <form action="/instagram_followers" method="get">
+        <label for="profile_username">Perfil del usuario:</label>
+        <input type="text" id="profile_username" name="profile_username">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="mensaje">
+        {% if datos %}
+            <span>{{ datos.message }}</span>
+        {% elif mensaje %}
+            <span>{{ mensaje }}</span>
+        {% endif %}
+    </div>
+
+    {% if datos %}
+    <div id="resultado">
+        <span>Nombre de usuario: {{ datos.result.username }}</span><br>
+        <span>Cantidad de seguidores: {{ datos.result.followers }}</span><br>
+        <span>Cantidad de seguidos: {{ datos.result.followees }}</span><br>
+        <span>Cantidad de publicaciones: {{ datos.result.mediacount }}</span><br>
+    </div>
+    {% endif %}
+
 </body>
 </html>
