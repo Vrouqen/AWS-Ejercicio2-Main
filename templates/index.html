@@ -1,21 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Main</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo Principal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/pagina1.css') }}">
 </head>
+
 <body>
-    <h1>Hola, soy una app que contiene todos los servicios de manera distribuida</h1>
+    <!-- Encabezado -->
+    <header class="header">
+        <h1 class="logo">Catálogo General</h1>
+        <p class="slogan">Productos seleccionados, con calidad artesanal</p>
+    </header>
 
-    <ul>
-        <li><a href="https://herokud1-03800266aff2.herokuapp.com/" target="_blank"><label>Heroku</label></a></li>
-        <li><a href="https://grupo6.up.railway.app/" target="_blank"><label>Railway</label></a></li>
-        <li><a href="https://versel-cyan.vercel.app/" target="_blank"><label>Vercel</label></a></li>
-        <li><a href="https://ejercicio2-paas-y36rn.ondigitalocean.app/" target="_blank"><label>Digital Ocean</label></a></li>
-        <li><a href="/chuck_norris" target="_blank"><label>Chuck Norris</label></a></li>
-        <li><a href="https://pokeapi-qotm.onrender.com/" target="_blank"><label>Poke API</label></a></li>
-    </ul>
+    <!-- Categorías principales -->
+    <main class="category-grid">
+        <article class="category-card">
+            <a href="/lacteos">
+                <img src="{{ url_for('static', filename='images/lacteos.png') }}" alt="Lácteos" />
+                <h2>Lácteos</h2>
+            </a>
+        </article>
 
+        <article class="category-card">
+            <a href="/carnes">
+                <img src="{{ url_for('static', filename='images/carne.png') }}" alt="Carnes" />
+                <h2>Carnes</h2>
+            </a>
+        </article>
+
+        <article class="category-card">
+            <a href="/bebidas">
+                <img src="{{ url_for('static', filename='images/bebidas.png') }}" alt="Bebidas" />
+                <h2>Bebidas</h2>
+            </a>
+        </article>
+
+        <article class="category-card">
+            <a href="/limpieza">
+                <img src="{{ url_for('static', filename='images/limpieza.png') }}" alt="Limpieza" />
+                <h2>Limpieza</h2>
+            </a>
+        </article>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <p>&copy; 2025&nbsp;Supermercado&nbsp;S.A. – Todos los derechos reservados.</p>
+        <p class="dev">Desarrollado por: Allan Correa, Luis Loor, Kevin Yuvi, David Yascaribay</p>
+    </footer>
 </body>
+
 </html>

@@ -1,0 +1,82 @@
+/* Fuente general y colores */
+html, body {
+  height: 100%; /* Asegura que el body ocupe toda la altura de la pantalla */
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  color: #333;
+  display: flex;
+  flex-direction: column; /* Los elementos se apilan verticalmente */
+}
+
+/* Encabezado */
+.header {
+  background-color: #332D56;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 36px;
+  margin: 0;
+}
+
+.slogan {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+/* Categorías principales */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 110px 20px;
+  flex-grow: 1; /* Esto hace que el contenido ocupe todo el espacio restante */
+}
+
+.category-card {
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-card img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.category-card h2 {
+  margin: 15px 0;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Pie de página */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #E3EEB2;
+  color: black;
+  font-size: 14px;
+  margin-top: auto; /* Esto empuja el footer al fondo */
+}
+
+.dev{
+  font-size: 11px;
+}
